@@ -20,7 +20,7 @@ jobs:
 
       - name: Build plugin
         run: |
-          corepack enable pnpm
+          corepack prepare pnpm@9.15.4 --activate
           pnpm install
           pnpm run build
 
