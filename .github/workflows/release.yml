@@ -18,9 +18,12 @@ jobs:
         with:
           node-version: "22.x"
 
+      - name: Install pnpm
+        run: |
+          npm install -g pnpm@9.15.4
+
       - name: Build plugin
         run: |
-          corepack prepare pnpm@9.15.4 --activate
           pnpm install
           pnpm run build
 
